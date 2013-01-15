@@ -1,4 +1,4 @@
-var HOME = __dirname,/**设置根目录**/  crypto = require('crypto'),/**用于MD5加密**/ fs = require('fs'), /**文件操作**/log = require('log4js'),logger = log.getLogger('system'),exec = require('child_process').exec;
+var HOME = __dirname, crypto = require('crypto'),fs = require('fs'),log = require('log4js'),logger = log.getLogger('system'),exec = require('child_process').exec;
 log.configure({
     appenders: [
     {
