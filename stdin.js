@@ -1,22 +1,3 @@
-/**
-  +------------------------------------------------------------------------------
-  实时监控并发用户
-  +------------------------------------------------------------------------------
-  @author   cupdir <cupdir@gmail.com>
-  @version  $Id$
-  +------------------------------------------------------------------------------
- */
-
-/* 
-1,同级目录新建一个logs/ip.log文件
-
-2,tailf  /data/logs/nginx/www.test.com.log |node /home/wwwroot/xiaomi/node-center/stdin.js 200
-
-日志文件，主要是过滤IP。 管道命令， 200是要进入黑洞的并发数
-
-注：利用tailf 来读NGINX访问日志按行读记录，存放内存进行分析，对生产环境业务没有影响，考虑tailf性能即可.
- */
-
 var HOME = __dirname,/**设置根目录**/  crypto = require('crypto'),/**用于MD5加密**/ fs = require('fs'), /**文件操作**/log = require('log4js'),logger = log.getLogger('system'),exec = require('child_process').exec;
 log.configure({
     appenders: [
